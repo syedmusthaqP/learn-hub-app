@@ -465,6 +465,392 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Programs Section */}
+      <section id="programs" className="py-20 bg-background" data-testid="programs-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="section-header">
+              <h2 className="section-title" data-testid="programs-title">Our Nursing Programs</h2>
+              <p className="section-subtitle" data-testid="programs-description">
+                Comprehensive nursing education programs designed to prepare you for international healthcare careers.
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="professional-card h-full" data-testid="gnm-program-card">
+                <CardHeader>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="feature-icon">
+                      <GraduationCap className="text-white h-8 w-8" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">General Nursing & Midwifery (GNM)</CardTitle>
+                      <p className="text-muted-foreground">3-Year Diploma Program</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground">Comprehensive nursing education with extensive clinical training and midwifery specialization.</p>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <Check className="text-primary h-4 w-4" />
+                        <span>36 months comprehensive training</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Check className="text-primary h-4 w-4" />
+                        <span>Clinical rotations in leading hospitals</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Check className="text-primary h-4 w-4" />
+                        <span>Midwifery specialization included</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Check className="text-primary h-4 w-4" />
+                        <span>International certification pathway</span>
+                      </div>
+                    </div>
+                    <div className="bg-primary/10 p-4 rounded-lg mt-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-primary">€2,700 - €3,200</div>
+                        <div className="text-sm text-muted-foreground">Starting salary in Germany</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="professional-card h-full" data-testid="anm-program-card">
+                <CardHeader>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="feature-icon">
+                      <Hospital className="text-white h-8 w-8" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">Auxiliary Nurse Midwifery (ANM)</CardTitle>
+                      <p className="text-muted-foreground">2-Year Certificate Program</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground">Focused practical training program for immediate healthcare workforce entry.</p>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <Check className="text-primary h-4 w-4" />
+                        <span>24 months intensive training</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Check className="text-primary h-4 w-4" />
+                        <span>Hands-on practical focus</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Check className="text-primary h-4 w-4" />
+                        <span>Community health specialization</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Check className="text-primary h-4 w-4" />
+                        <span>Fast-track to employment</span>
+                      </div>
+                    </div>
+                    <div className="bg-primary/10 p-4 rounded-lg mt-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-primary">€2,400 - €2,800</div>
+                        <div className="text-sm text-muted-foreground">Starting salary in Germany</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Opportunities Section */}
+      <section id="opportunities" className="py-20 bg-secondary" data-testid="opportunities-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="section-header">
+              <h2 className="section-title" data-testid="opportunities-title">Germany Healthcare Opportunities</h2>
+              <p className="section-subtitle" data-testid="opportunities-description">
+                Discover exceptional career opportunities in Germany's world-renowned healthcare system.
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="text-center h-full" data-testid="opportunity-salary">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Euro className="text-primary-foreground h-8 w-8" />
+                  </div>
+                  <CardTitle>Competitive Salaries</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">Starting salaries of €2,700-3,200 per month with excellent growth opportunities and comprehensive benefits.</p>
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span>Entry Level</span>
+                      <span className="font-semibold">€2,700</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Experienced</span>
+                      <span className="font-semibold">€3,200+</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Specialized</span>
+                      <span className="font-semibold">€4,000+</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="text-center h-full" data-testid="opportunity-benefits">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <HomeIcon className="text-primary-foreground h-8 w-8" />
+                  </div>
+                  <CardTitle>Comprehensive Benefits</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">Full healthcare coverage, paid vacation, pension plans, and professional development support.</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <Check className="text-primary h-4 w-4" />
+                      <span>Health Insurance</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="text-primary h-4 w-4" />
+                      <span>30 Days Paid Leave</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="text-primary h-4 w-4" />
+                      <span>Pension Benefits</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="text-primary h-4 w-4" />
+                      <span>Career Development</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <Card className="text-center h-full" data-testid="opportunity-growth">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="text-primary-foreground h-8 w-8" />
+                  </div>
+                  <CardTitle>Career Growth</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">Clear advancement pathways with opportunities for specialization and leadership roles.</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <Check className="text-primary h-4 w-4" />
+                      <span>Specialization Options</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="text-primary h-4 w-4" />
+                      <span>Leadership Training</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="text-primary h-4 w-4" />
+                      <span>Continuing Education</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Check className="text-primary h-4 w-4" />
+                      <span>Research Opportunities</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section id="success-stories" className="py-20 bg-background" data-testid="success-stories-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="section-header">
+              <h2 className="section-title" data-testid="success-stories-title">Success Stories</h2>
+              <p className="section-subtitle" data-testid="success-stories-description">
+                Hear from our graduates who are now thriving in Germany's healthcare system.
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full" data-testid="success-story-1">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                      alt="Priya Sharma - successful nurse in Germany"
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div>
+                      <CardTitle className="text-lg">Priya Sharma</CardTitle>
+                      <p className="text-muted-foreground">GNM Graduate 2022</p>
+                      <p className="text-sm text-primary">Berlin University Hospital</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground italic mb-4">
+                    "The partnership between CVS and StudyWings transformed my career. I'm now working in one of Germany's top hospitals with excellent salary and benefits. The support throughout the journey was exceptional."
+                  </p>
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <div className="text-primary font-semibold">Current Position: ICU Nurse</div>
+                    <div className="text-sm text-muted-foreground">Salary: €3,100/month</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full" data-testid="success-story-2">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                      alt="Raj Patel - successful nurse in Germany"
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div>
+                      <CardTitle className="text-lg">Raj Patel</CardTitle>
+                      <p className="text-muted-foreground">ANM Graduate 2023</p>
+                      <p className="text-sm text-primary">Munich General Hospital</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground italic mb-4">
+                    "From a small town in India to working in Munich's prestigious hospital. The German language training and visa support made the impossible possible. Forever grateful to this partnership."
+                  </p>
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <div className="text-primary font-semibold">Current Position: Emergency Nurse</div>
+                    <div className="text-sm text-muted-foreground">Salary: €2,800/month</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full" data-testid="success-story-3">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1594824505341-ec2779e51b79?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                      alt="Anita Reddy - successful nurse in Germany"
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div>
+                      <CardTitle className="text-lg">Anita Reddy</CardTitle>
+                      <p className="text-muted-foreground">GNM Graduate 2021</p>
+                      <p className="text-sm text-primary">Frankfurt Medical Center</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground italic mb-4">
+                    "The comprehensive training at CVS combined with StudyWings' placement support helped me secure my dream job. Germany offers incredible growth opportunities for healthcare professionals."
+                  </p>
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <div className="text-primary font-semibold">Current Position: Senior Nurse</div>
+                    <div className="text-sm text-muted-foreground">Salary: €3,400/month</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-blue-700" data-testid="view-more-stories">
+                View More Success Stories
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
       <section id="contact" className="py-20 bg-secondary" data-testid="contact-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
