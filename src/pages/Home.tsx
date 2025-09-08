@@ -485,7 +485,7 @@ export default function Home() {
           {/* Journey Steps */}
           <div className="relative">
             {/* Journey Path Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full journey-path hidden lg:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-500 via-red-500 to-purple-500 opacity-20 hidden lg:block"></div>
 
             <div className="space-y-16">
               {/* Step 1: Education & Training */}
@@ -563,11 +563,11 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="mt-6 flex items-center justify-center">
-                    <div className="status-indicator">
-                      <div className="status-light"></div>
-                      <span>Online + Offline</span>
-                    </div>
+                  <div className="mt-6 flex items-center text-blue-600">
+                    <Globe className="h-5 w-5 mr-2" />
+                    <span className="font-medium">
+                      Online + Offline
+                    </span>
                   </div>
                 </div>
 
