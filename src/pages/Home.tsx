@@ -464,6 +464,332 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Germany Opportunities */}
+      <section id="opportunities" className="py-20 bg-muted" data-testid="opportunities-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="section-header">
+              <h2 className="section-title" data-testid="opportunities-title">Your Journey to Germany</h2>
+              <p className="section-subtitle" data-testid="opportunities-description">
+                Discover a seamless pathway to Germany's world-renowned healthcare system, featuring competitive salaries, exceptional work-life balance, and unlimited professional growth opportunities.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Journey Steps */}
+          <div className="relative">
+            {/* Journey Path Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-500 via-red-500 to-purple-500 opacity-20 hidden lg:block"></div>
+
+            <div className="space-y-16">
+              {/* Step 1: Education & Training */}
+              <motion.div
+                className="grid lg:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="journey-step p-8 rounded-2xl" data-testid="step-education">
+                  <div className="flex items-start space-x-6 mb-6">
+                    <div className="step-number">1</div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Education & Training</h3>
+                      <p className="text-gray-600 text-lg">Complete your nursing education at CVS with world-class training</p>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                      <h4 className="font-semibold text-orange-800 mb-2">GNM Program</h4>
+                      <p className="text-orange-700 text-sm">3-year comprehensive nursing diploma</p>
+                    </div>
+                    <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                      <h4 className="font-semibold text-orange-800 mb-2">ANM Program</h4>
+                      <p className="text-orange-700 text-sm">2-year auxiliary nursing certification</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex items-center text-orange-600">
+                    <Clock className="h-5 w-5 mr-2" />
+                    <span className="font-medium">Duration: 2-3 years depending on program</span>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Nursing education at CVS"
+                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+                </div>
+              </motion.div>
+
+              {/* Step 2: Language & Certification */}
+              <motion.div
+                className="grid lg:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="lg:order-2 journey-step p-8 rounded-2xl" data-testid="step-language">
+                  <div className="flex items-start space-x-6 mb-6">
+                    <div className="step-number">2</div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Language & Certification</h3>
+                      <p className="text-gray-600 text-lg">Master German language and obtain required certifications with StudyWings expert training</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                      <h4 className="font-semibold text-blue-800 mb-2">German Language (A1-B2)</h4>
+                      <p className="text-blue-700 text-sm">Comprehensive German language training from basic to professional level</p>
+                      <div className="mt-2 text-xs text-blue-600">✓ Interactive classes ✓ Cultural immersion ✓ Medical German</div>
+                    </div>
+
+                    <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                      <h4 className="font-semibold text-purple-800 mb-2">Professional Certification</h4>
+                      <p className="text-purple-700 text-sm">Nursing qualification recognition and skill assessment</p>
+                      <div className="mt-2 text-xs text-purple-600">✓ Credential evaluation ✓ Skill assessment ✓ Professional registration</div>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex items-center text-blue-600">
+                    <Globe className="h-5 w-5 mr-2" />
+                    <span className="font-medium">
+                      Online + Offline
+                    </span>
+                  </div>
+                </div>
+
+                <div className="lg:order-1 relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="German language learning and professional certification"
+                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+                  <div className="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Language Training
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 3: Documentation & Visa Support */}
+              <motion.div
+                className="grid lg:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="journey-step p-8 rounded-2xl" data-testid="step-documentation">
+                  <div className="flex items-start space-x-6 mb-6">
+                    <div className="step-number">3</div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Documentation & Visa Support</h3>
+                      <p className="text-gray-600 text-lg">Complete legal and documentation assistance for seamless migration</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 mb-6">
+                    <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                      <h4 className="font-semibold text-indigo-800 mb-2">Visa Processing</h4>
+                      <p className="text-indigo-700 text-sm">Complete visa application support with legal compliance</p>
+                      <div className="mt-2 text-xs text-indigo-600">✓ Document preparation ✓ Interview prep ✓ Legal guidance</div>
+                    </div>
+
+                    <div className="bg-cyan-50 p-4 rounded-lg border border-cyan-200">
+                      <h4 className="font-semibold text-cyan-800 mb-2">Credential Recognition</h4>
+                      <p className="text-cyan-700 text-sm">Professional qualification recognition by German authorities</p>
+                      <div className="mt-2 text-xs text-cyan-600">✓ Document translation ✓ Apostille services ✓ Evaluation support</div>
+                    </div>
+
+                    <div className="bg-teal-50 p-4 rounded-lg border border-teal-200">
+                      <h4 className="font-semibold text-teal-800 mb-2">Legal Compliance</h4>
+                      <p className="text-teal-700 text-sm">Ensure all documentation meets German legal requirements</p>
+                      <div className="mt-2 text-xs text-teal-600">✓ Immigration law ✓ Work permits ✓ Healthcare regulations</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center text-indigo-600">
+                    <Scale className="h-5 w-5 mr-2" />
+                    <span className="font-medium">100% legal compliance • Expert legal team</span>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Professional documentation and legal services"
+                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+                  <div className="absolute top-4 left-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Legal Support
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 4: Job Placement & Career */}
+              <motion.div
+                className="grid lg:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="lg:order-2 journey-step p-8 rounded-2xl" data-testid="step-placement">
+                  <div className="flex items-start space-x-6 mb-6">
+                    <div className="step-number">4</div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Job Placement & Career</h3>
+                      <p className="text-gray-600 text-lg">Secure your dream position in Germany's healthcare system</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-center justify-between bg-green-50 p-4 rounded-lg border border-green-200">
+                      <div>
+                        <h4 className="font-semibold text-green-800">Starting Salary</h4>
+                        <p className="text-green-700 text-sm">Monthly income</p>
+                      </div>
+                      <div className="text-2xl font-bold text-green-600">€2,700-3,200</div>
+                    </div>
+
+                    <div className="flex items-center justify-between bg-emerald-50 p-4 rounded-lg border border-emerald-200">
+                      <div>
+                        <h4 className="font-semibold text-emerald-800">Work-Life Balance</h4>
+                        <p className="text-emerald-700 text-sm">Weekly hours + vacation</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-lg font-bold text-emerald-600">38.5h/week</div>
+                        <div className="text-sm text-emerald-600">30 days vacation</div>
+                      </div>
+                    </div>
+
+                    <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                      <h4 className="font-semibold text-yellow-800 mb-2">Career Growth</h4>
+                      <p className="text-yellow-700 text-sm">Clear progression paths with specialized training opportunities</p>
+                      <div className="mt-2 text-xs text-yellow-600">✓ Leadership roles ✓ Specialization training ✓ Higher education support</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center text-green-600">
+                    <Hospital className="h-5 w-5 mr-2" />
+                    <span className="font-medium">50+ partner hospitals • Top-tier medical facilities</span>
+                  </div>
+                </div>
+
+                <div className="lg:order-1 relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Professional nursing career in Germany"
+                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-lg">
+                    <div className="text-2xl font-bold text-gray-800">🇩🇪</div>
+                    <div className="text-sm font-semibold text-gray-700">Your German Career Awaits</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 5: Arrival & Settlement Support */}
+              <motion.div
+                className="grid lg:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="journey-step p-8 rounded-2xl" data-testid="step-settlement">
+                  <div className="flex items-start space-x-6 mb-6">
+                    <div className="step-number">5</div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Arrival & Settlement Support</h3>
+                      <p className="text-gray-600 text-lg">Comprehensive support for your new life in Germany</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 mb-6">
+                    <div className="bg-rose-50 p-4 rounded-lg border border-rose-200">
+                      <h4 className="font-semibold text-rose-800 mb-2">Accommodation Assistance</h4>
+                      <p className="text-rose-700 text-sm">Help finding suitable housing near your workplace</p>
+                      <div className="mt-2 text-xs text-rose-600">✓ Temporary housing ✓ Permanent residence ✓ Lease assistance</div>
+                    </div>
+
+                    <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
+                      <h4 className="font-semibold text-amber-800 mb-2">Cultural Integration</h4>
+                      <p className="text-amber-700 text-sm">Orientation programs for smooth cultural adaptation</p>
+                      <div className="mt-2 text-xs text-amber-600">✓ Cultural orientation ✓ Social integration ✓ Community support</div>
+                    </div>
+
+                    <div className="bg-pink-50 p-4 rounded-lg border border-pink-200">
+                      <h4 className="font-semibold text-pink-800 mb-2">Ongoing Support</h4>
+                      <p className="text-pink-700 text-sm">Continuous assistance during your initial months in Germany</p>
+                      <div className="mt-2 text-xs text-pink-600">✓ 24/7 helpline ✓ Local contacts ✓ Problem resolution</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center text-rose-600">
+                    <HomeIcon className="h-5 w-5 mr-2" />
+                    <span className="font-medium">Complete settlement support • Your success is our mission</span>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1531804055935-76f44d7c3621?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Beautiful German cityscape and community integration"
+                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+                  <div className="absolute top-4 right-4 bg-rose-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Welcome Home
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Germany Hospital Facilities Image */}
+          <motion.div
+            className="relative rounded-2xl overflow-hidden shadow-2xl mt-16"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            data-testid="hospital-facilities"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
+              alt="Modern German hospital and medical facilities"
+              className="w-full h-96 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-80"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white">
+                <h3 className="text-3xl font-bold mb-4" data-testid="facilities-title">World-Class Healthcare Facilities</h3>
+                <p className="text-xl opacity-90 max-w-2xl mx-auto" data-testid="facilities-description">
+                  Join Germany's premier hospitals and medical centers, equipped with cutting-edge technology and international standards of care.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+
       {/* Contact Form */}
       <section id="contact" className="py-20 bg-secondary" data-testid="contact-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
