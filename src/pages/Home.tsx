@@ -24,8 +24,24 @@ import {
   Menu,
   X,
   UserRound,
-  Scale
+  Scale,
+  FileText,
+  BookOpen,
+  HeartHandshake,
+  Plane,
+  Building2,
+  Network,
+  Shield,
+  Banknote,
+  GraduationCapIcon,
+  Languages
 } from "lucide-react";
+import nursingEducation from "@/assets/nursing-education.jpg";
+import nursingCollaboration from "@/assets/nursing-collaboration.jpg";
+import nursingLanguage from "@/assets/nursing-language.jpg";
+import nursingDocumentation from "@/assets/nursing-documentation.jpg";
+import nursingCareer from "@/assets/nursing-career.jpg";
+import nursingArrival from "@/assets/nursing-arrival.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -464,9 +480,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Germany Opportunities */}
-      <section id="opportunities" className="py-20 bg-muted" data-testid="opportunities-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Comprehensive Journey to Germany */}
+      <section id="opportunities" className="py-20 bg-muted relative overflow-hidden" data-testid="opportunities-section">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="floating-orb top-20 left-10 bg-gradient-to-br from-orange-400/20 to-red-400/20"></div>
+          <div className="floating-orb-2 bottom-40 right-20 bg-gradient-to-br from-blue-400/20 to-purple-400/20"></div>
+          <div className="floating-orb top-60 right-10 bg-gradient-to-br from-green-400/20 to-teal-400/20"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -475,317 +498,417 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <div className="section-header">
-              <h2 className="section-title" data-testid="opportunities-title">Your Journey to Germany</h2>
+              <h2 className="section-title gradient-text" data-testid="opportunities-title">Your Complete Journey to Germany</h2>
               <p className="section-subtitle" data-testid="opportunities-description">
-                Discover a seamless pathway to Germany's world-renowned healthcare system, featuring competitive salaries, exceptional work-life balance, and unlimited professional growth opportunities.
+                Comprehensive end-to-end support from CVS education to successful settlement in Germany's healthcare system. Every step professionally managed for your success.
               </p>
             </div>
           </motion.div>
 
-          {/* Journey Steps */}
+          {/* Comprehensive Journey Steps */}
           <div className="relative">
-            {/* Journey Path Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-500 via-red-500 to-purple-500 opacity-20 hidden lg:block"></div>
+            {/* Enhanced Journey Path Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-orange-500 via-blue-500 via-purple-500 to-green-500 opacity-30 hidden lg:block rounded-full journey-path-glow"></div>
 
-            <div className="space-y-16">
-              {/* Step 1: Education & Training */}
+            <div className="space-y-20">
+              {/* Step 1: CVS Education & Free Career Counseling */}
               <motion.div
                 className="grid lg:grid-cols-2 gap-8 items-center"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="journey-step p-8 rounded-2xl" data-testid="step-education">
-                  <div className="flex items-start space-x-6 mb-6">
-                    <div className="step-number">1</div>
+                <div className="journey-card gradient-border p-8 rounded-3xl" data-testid="step-education">
+                  <div className="flex items-start space-x-6 mb-8">
+                    <div className="step-number-glow">1</div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Education & Training</h3>
-                      <p className="text-gray-600 text-lg">Complete your nursing education at CVS with world-class training</p>
+                      <h3 className="text-3xl font-bold text-foreground mb-3">CVS Education & Career Counseling</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">Start your nursing journey with world-class education and personalized career guidance</p>
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                      <h4 className="font-semibold text-orange-800 mb-2">GNM Program</h4>
-                      <p className="text-orange-700 text-sm">3-year comprehensive nursing diploma</p>
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="service-card bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <GraduationCap className="h-5 w-5 text-orange-600" />
+                        <h4 className="font-bold text-orange-800">GNM Program</h4>
+                      </div>
+                      <p className="text-orange-700 text-sm mb-2">3-year comprehensive nursing diploma with clinical rotations</p>
+                      <div className="text-xs text-orange-600">✓ State-of-art labs ✓ Hospital partnerships</div>
                     </div>
-                    <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                      <h4 className="font-semibold text-orange-800 mb-2">ANM Program</h4>
-                      <p className="text-orange-700 text-sm">2-year auxiliary nursing certification</p>
+                    <div className="service-card bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Hospital className="h-5 w-5 text-orange-600" />
+                        <h4 className="font-bold text-orange-800">ANM Program</h4>
+                      </div>
+                      <p className="text-orange-700 text-sm mb-2">2-year auxiliary nursing certification with practical focus</p>
+                      <div className="text-xs text-orange-600">✓ Simulation training ✓ Clinical excellence</div>
+                    </div>
+                    <div className="service-card bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <HeartHandshake className="h-5 w-5 text-blue-600" />
+                        <h4 className="font-bold text-blue-800">Free Career Counseling</h4>
+                      </div>
+                      <p className="text-blue-700 text-sm mb-2">Personalized guidance for choosing best career path</p>
+                      <div className="text-xs text-blue-600">✓ Academic background analysis ✓ Career goals assessment</div>
+                    </div>
+                    <div className="service-card bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <FileText className="h-5 w-5 text-purple-600" />
+                        <h4 className="font-bold text-purple-800">University Applications</h4>
+                      </div>
+                      <p className="text-purple-700 text-sm mb-2">Complete application process management</p>
+                      <div className="text-xs text-purple-600">✓ Document preparation ✓ Guaranteed admissions</div>
                     </div>
                   </div>
 
-                  <div className="mt-6 flex items-center text-orange-600">
-                    <Clock className="h-5 w-5 mr-2" />
-                    <span className="font-medium">Duration: 2-3 years depending on program</span>
+                  <div className="status-indicator">
+                    <Clock className="h-5 w-5 mr-2 text-orange-600" />
+                    <span className="font-semibold text-orange-600">Duration: 2-3 years • 15+ years excellence</span>
                   </div>
                 </div>
 
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-                    alt="Nursing education at CVS"
-                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+                <div className="relative group">
+                  <div className="image-container">
+                    <img
+                      src={nursingEducation}
+                      alt="Professional nursing education at CVS with modern simulation labs"
+                      className="rounded-3xl shadow-2xl w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-orange-600/30 via-transparent to-transparent rounded-3xl"></div>
+                    <div className="absolute top-6 left-6 bg-orange-500/90 text-white px-4 py-2 rounded-full text-sm font-bold backdrop-blur-sm">
+                      Premier Nursing Education
+                    </div>
+                  </div>
                 </div>
               </motion.div>
 
-              {/* Step 2: Language & Certification */}
+              {/* Step 2: Language Training & Scholarships */}
               <motion.div
                 className="grid lg:grid-cols-2 gap-8 items-center"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="lg:order-2 journey-step p-8 rounded-2xl" data-testid="step-language">
-                  <div className="flex items-start space-x-6 mb-6">
-                    <div className="step-number">2</div>
+                <div className="lg:order-2 journey-card gradient-border p-8 rounded-3xl" data-testid="step-language">
+                  <div className="flex items-start space-x-6 mb-8">
+                    <div className="step-number-glow bg-gradient-to-br from-blue-500 to-purple-500">2</div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Language & Certification</h3>
-                      <p className="text-gray-600 text-lg">Master German language and obtain required certifications with StudyWings expert training</p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                      <h4 className="font-semibold text-blue-800 mb-2">German Language (A1-B2)</h4>
-                      <p className="text-blue-700 text-sm">Comprehensive German language training from basic to professional level</p>
-                      <div className="mt-2 text-xs text-blue-600">✓ Interactive classes ✓ Cultural immersion ✓ Medical German</div>
-                    </div>
-
-                    <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                      <h4 className="font-semibold text-purple-800 mb-2">Professional Certification</h4>
-                      <p className="text-purple-700 text-sm">Nursing qualification recognition and skill assessment</p>
-                      <div className="mt-2 text-xs text-purple-600">✓ Credential evaluation ✓ Skill assessment ✓ Professional registration</div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 flex items-center text-blue-600">
-                    <Globe className="h-5 w-5 mr-2" />
-                    <span className="font-medium">
-                      Online + Offline
-                    </span>
-                  </div>
-                </div>
-
-                <div className="lg:order-1 relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-                    alt="German language learning and professional certification"
-                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-                  <div className="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Language Training
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Step 3: Documentation & Visa Support */}
-              <motion.div
-                className="grid lg:grid-cols-2 gap-8 items-center"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="journey-step p-8 rounded-2xl" data-testid="step-documentation">
-                  <div className="flex items-start space-x-6 mb-6">
-                    <div className="step-number">3</div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Documentation & Visa Support</h3>
-                      <p className="text-gray-600 text-lg">Complete legal and documentation assistance for seamless migration</p>
+                      <h3 className="text-3xl font-bold text-foreground mb-3">Language Training & Funding Support</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">Master German language and secure funding for your educational journey</p>
                     </div>
                   </div>
 
                   <div className="space-y-4 mb-6">
-                    <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
-                      <h4 className="font-semibold text-indigo-800 mb-2">Visa Processing</h4>
-                      <p className="text-indigo-700 text-sm">Complete visa application support with legal compliance</p>
-                      <div className="mt-2 text-xs text-indigo-600">✓ Document preparation ✓ Interview prep ✓ Legal guidance</div>
+                    <div className="service-card bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Languages className="h-5 w-5 text-blue-600" />
+                        <h4 className="font-bold text-blue-800">German Language (A1-B2)</h4>
+                      </div>
+                      <p className="text-blue-700 text-sm mb-3">Comprehensive German language preparation with medical terminology</p>
+                      <div className="flex items-center space-x-2 mb-2">
+                        <div className="green-light-pulse"></div>
+                        <span className="text-sm font-semibold text-green-600">Online + Offline Classes</span>
+                      </div>
+                      <div className="text-xs text-blue-600">✓ IELTS & German prep ✓ Cultural immersion ✓ Medical German</div>
                     </div>
 
-                    <div className="bg-cyan-50 p-4 rounded-lg border border-cyan-200">
-                      <h4 className="font-semibold text-cyan-800 mb-2">Credential Recognition</h4>
-                      <p className="text-cyan-700 text-sm">Professional qualification recognition by German authorities</p>
-                      <div className="mt-2 text-xs text-cyan-600">✓ Document translation ✓ Apostille services ✓ Evaluation support</div>
+                    <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Banknote className="h-5 w-5 text-green-600" />
+                        <h4 className="font-bold text-green-800">Scholarships & Funding</h4>
+                      </div>
+                      <p className="text-green-700 text-sm mb-2">Comprehensive funding support up to 40 lakhs from reputed banks</p>
+                      <div className="text-xs text-green-600">✓ University scholarships ✓ Study loans ✓ Funding up to 40L</div>
                     </div>
 
-                    <div className="bg-teal-50 p-4 rounded-lg border border-teal-200">
-                      <h4 className="font-semibold text-teal-800 mb-2">Legal Compliance</h4>
-                      <p className="text-teal-700 text-sm">Ensure all documentation meets German legal requirements</p>
-                      <div className="mt-2 text-xs text-teal-600">✓ Immigration law ✓ Work permits ✓ Healthcare regulations</div>
+                    <div className="service-card bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Shield className="h-5 w-5 text-teal-600" />
+                        <h4 className="font-bold text-teal-800">Blocked Account Services</h4>
+                      </div>
+                      <p className="text-teal-700 text-sm mb-2">Complete support for blocked account & money exchange</p>
+                      <div className="text-xs text-teal-600">✓ Account setup ✓ Currency exchange ✓ Financial planning</div>
                     </div>
                   </div>
 
-                  <div className="flex items-center text-indigo-600">
-                    <Scale className="h-5 w-5 mr-2" />
-                    <span className="font-medium">100% legal compliance • Expert legal team</span>
+                  <div className="status-indicator">
+                    <Globe className="h-5 w-5 mr-2 text-blue-600" />
+                    <span className="font-semibold text-blue-600">95% pass rate • Expert certified instructors</span>
                   </div>
                 </div>
 
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-                    alt="Professional documentation and legal services"
-                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-                  <div className="absolute top-4 left-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Legal Support
+                <div className="lg:order-1 relative group">
+                  <div className="image-container">
+                    <img
+                      src={nursingLanguage}
+                      alt="International nursing students learning German language with medical terminology"
+                      className="rounded-3xl shadow-2xl w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 via-transparent to-transparent rounded-3xl"></div>
+                    <div className="absolute top-6 left-6 bg-blue-500/90 text-white px-4 py-2 rounded-full text-sm font-bold backdrop-blur-sm">
+                      Language & Funding Excellence
+                    </div>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Step 4: Job Placement & Career */}
+              {/* Step 3: Comprehensive Documentation & Visa Support */}
+              <motion.div
+                className="grid lg:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="journey-card gradient-border p-8 rounded-3xl" data-testid="step-documentation">
+                  <div className="flex items-start space-x-6 mb-8">
+                    <div className="step-number-glow bg-gradient-to-br from-purple-500 to-pink-500">3</div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-foreground mb-3">Complete Documentation & Visa Excellence</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">Comprehensive legal and documentation support for seamless migration</p>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="service-card bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <FileText className="h-5 w-5 text-purple-600" />
+                        <h4 className="font-bold text-purple-800">Passport & Visa Assistance</h4>
+                      </div>
+                      <p className="text-purple-700 text-sm mb-2">Complete passport application & APS process support</p>
+                      <div className="text-xs text-purple-600">✓ Passport guidance ✓ APS process ✓ Interview prep</div>
+                    </div>
+                    <div className="service-card bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Scale className="h-5 w-5 text-indigo-600" />
+                        <h4 className="font-bold text-indigo-800">Visa Documentation</h4>
+                      </div>
+                      <p className="text-indigo-700 text-sm mb-2">Online applications for German & European universities</p>
+                      <div className="text-xs text-indigo-600">✓ CSP handling ✓ Document process ✓ VFS Global support</div>
+                    </div>
+                    <div className="service-card bg-gradient-to-br from-cyan-50 to-teal-50 border border-cyan-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <BookOpen className="h-5 w-5 text-cyan-600" />
+                        <h4 className="font-bold text-cyan-800">Visa Preparation</h4>
+                      </div>
+                      <p className="text-cyan-700 text-sm mb-2">Complete visa interview preparation & SOP drafting</p>
+                      <div className="text-xs text-cyan-600">✓ Interview prep ✓ SOP creation ✓ CV formatting</div>
+                    </div>
+                    <div className="service-card bg-gradient-to-br from-teal-50 to-green-50 border border-teal-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Shield className="h-5 w-5 text-teal-600" />
+                        <h4 className="font-bold text-teal-800">Pre-Departure Session</h4>
+                      </div>
+                      <p className="text-teal-700 text-sm mb-2">Essential guidance on packing, travel & cultural adaptation</p>
+                      <div className="text-xs text-teal-600">✓ Packing guidance ✓ Cultural tips ✓ Expectations briefing</div>
+                    </div>
+                  </div>
+
+                  <div className="status-indicator">
+                    <Shield className="h-5 w-5 mr-2 text-purple-600" />
+                    <span className="font-semibold text-purple-600">100% legal compliance • Expert documentation team</span>
+                  </div>
+                </div>
+
+                <div className="relative group">
+                  <div className="image-container">
+                    <img
+                      src={nursingDocumentation}
+                      alt="Professional nurse with official German work visa documents and certificates"
+                      className="rounded-3xl shadow-2xl w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-purple-600/30 via-transparent to-transparent rounded-3xl"></div>
+                    <div className="absolute top-6 left-6 bg-purple-500/90 text-white px-4 py-2 rounded-full text-sm font-bold backdrop-blur-sm">
+                      Legal Excellence & Compliance
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 4: Job Placement & Career Success */}
               <motion.div
                 className="grid lg:grid-cols-2 gap-8 items-center"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="lg:order-2 journey-step p-8 rounded-2xl" data-testid="step-placement">
-                  <div className="flex items-start space-x-6 mb-6">
-                    <div className="step-number">4</div>
+                <div className="lg:order-2 journey-card gradient-border p-8 rounded-3xl" data-testid="step-placement">
+                  <div className="flex items-start space-x-6 mb-8">
+                    <div className="step-number-glow bg-gradient-to-br from-green-500 to-emerald-500">4</div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Job Placement & Career</h3>
-                      <p className="text-gray-600 text-lg">Secure your dream position in Germany's healthcare system</p>
+                      <h3 className="text-3xl font-bold text-foreground mb-3">Job Placement & Career Excellence</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">Secure your dream position with comprehensive placement support</p>
                     </div>
                   </div>
 
                   <div className="space-y-4 mb-6">
-                    <div className="flex items-center justify-between bg-green-50 p-4 rounded-lg border border-green-200">
-                      <div>
-                        <h4 className="font-semibold text-green-800">Starting Salary</h4>
-                        <p className="text-green-700 text-sm">Monthly income</p>
+                    <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="font-bold text-green-800 text-lg">Starting Salary Range</h4>
+                        <div className="text-3xl font-bold text-green-600">€2,700-3,200</div>
                       </div>
-                      <div className="text-2xl font-bold text-green-600">€2,700-3,200</div>
+                      <p className="text-green-700 text-sm">Monthly income with excellent growth opportunities</p>
+                      <div className="text-xs text-green-600 mt-2">✓ Competitive salary ✓ Regular increments ✓ Performance bonuses</div>
                     </div>
 
-                    <div className="flex items-center justify-between bg-emerald-50 p-4 rounded-lg border border-emerald-200">
-                      <div>
-                        <h4 className="font-semibold text-emerald-800">Work-Life Balance</h4>
-                        <p className="text-emerald-700 text-sm">Weekly hours + vacation</p>
+                    <div className="service-card bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200/50">
+                      <div className="flex items-center justify-between mb-3">
+                        <div>
+                          <h4 className="font-bold text-emerald-800">Work-Life Balance</h4>
+                          <p className="text-emerald-700 text-sm">Professional healthcare environment</p>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-emerald-600">38.5h</div>
+                          <div className="text-sm text-emerald-600">per week</div>
+                        </div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-lg font-bold text-emerald-600">38.5h/week</div>
-                        <div className="text-sm text-emerald-600">30 days vacation</div>
-                      </div>
+                      <div className="text-xs text-emerald-600">✓ 30 days vacation ✓ Health benefits ✓ Professional growth</div>
                     </div>
 
-                    <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-                      <h4 className="font-semibold text-yellow-800 mb-2">Career Growth</h4>
-                      <p className="text-yellow-700 text-sm">Clear progression paths with specialized training opportunities</p>
-                      <div className="mt-2 text-xs text-yellow-600">✓ Leadership roles ✓ Specialization training ✓ Higher education support</div>
+                    <div className="service-card bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Building2 className="h-5 w-5 text-blue-600" />
+                        <h4 className="font-bold text-blue-800">Accommodation Support</h4>
+                      </div>
+                      <p className="text-blue-700 text-sm mb-2">Complete housing assistance in major German cities</p>
+                      <div className="text-xs text-blue-600">✓ Berlin, Munich, Hamburg ✓ University dorms ✓ Part-time job references</div>
                     </div>
                   </div>
 
-                  <div className="flex items-center text-green-600">
-                    <Hospital className="h-5 w-5 mr-2" />
-                    <span className="font-medium">50+ partner hospitals • Top-tier medical facilities</span>
+                  <div className="status-indicator">
+                    <Hospital className="h-5 w-5 mr-2 text-green-600" />
+                    <span className="font-semibold text-green-600">50+ partner hospitals • Direct placement guarantee</span>
                   </div>
                 </div>
 
-                <div className="lg:order-1 relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-                    alt="Professional nursing career in Germany"
-                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-gray-800">🇩🇪</div>
-                    <div className="text-sm font-semibold text-gray-700">Your German Career Awaits</div>
+                <div className="lg:order-1 relative group">
+                  <div className="image-container">
+                    <img
+                      src={nursingCareer}
+                      alt="Happy international nurse working in modern German hospital with patients"
+                      className="rounded-3xl shadow-2xl w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-600/30 via-transparent to-transparent rounded-3xl"></div>
+                    <div className="absolute top-6 left-6 bg-green-500/90 text-white px-4 py-2 rounded-full text-sm font-bold backdrop-blur-sm">
+                      Career Success in Germany
+                    </div>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Step 5: Arrival & Settlement Support */}
+              {/* Step 5: Post-Arrival Excellence & Settlement */}
               <motion.div
                 className="grid lg:grid-cols-2 gap-8 items-center"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="journey-step p-8 rounded-2xl" data-testid="step-settlement">
-                  <div className="flex items-start space-x-6 mb-6">
-                    <div className="step-number">5</div>
+                <div className="journey-card gradient-border p-8 rounded-3xl" data-testid="step-settlement">
+                  <div className="flex items-start space-x-6 mb-8">
+                    <div className="step-number-glow bg-gradient-to-br from-teal-500 to-blue-500">5</div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-2">Arrival & Settlement Support</h3>
-                      <p className="text-gray-600 text-lg">Comprehensive support for your new life in Germany</p>
+                      <h3 className="text-3xl font-bold text-foreground mb-3">Post-Arrival Support & Settlement</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">Complete settlement assistance for smooth transition to German life</p>
                     </div>
                   </div>
 
-                  <div className="space-y-4 mb-6">
-                    <div className="bg-rose-50 p-4 rounded-lg border border-rose-200">
-                      <h4 className="font-semibold text-rose-800 mb-2">Accommodation Assistance</h4>
-                      <p className="text-rose-700 text-sm">Help finding suitable housing near your workplace</p>
-                      <div className="mt-2 text-xs text-rose-600">✓ Temporary housing ✓ Permanent residence ✓ Lease assistance</div>
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="service-card bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Plane className="h-5 w-5 text-teal-600" />
+                        <h4 className="font-bold text-teal-800">Airport Pickup</h4>
+                      </div>
+                      <p className="text-teal-700 text-sm mb-2">Professional airport pickup assistance (if required)</p>
+                      <div className="text-xs text-teal-600">✓ Arrival support ✓ Initial guidance ✓ Safe transportation</div>
                     </div>
-
-                    <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
-                      <h4 className="font-semibold text-amber-800 mb-2">Cultural Integration</h4>
-                      <p className="text-amber-700 text-sm">Orientation programs for smooth cultural adaptation</p>
-                      <div className="mt-2 text-xs text-amber-600">✓ Cultural orientation ✓ Social integration ✓ Community support</div>
+                    <div className="service-card bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <FileText className="h-5 w-5 text-blue-600" />
+                        <h4 className="font-bold text-blue-800">Registration Support</h4>
+                      </div>
+                      <p className="text-blue-700 text-sm mb-2">City registration & residence permit process assistance</p>
+                      <div className="text-xs text-blue-600">✓ City registration ✓ Residence permits ✓ Legal formalities</div>
                     </div>
-
-                    <div className="bg-pink-50 p-4 rounded-lg border border-pink-200">
-                      <h4 className="font-semibold text-pink-800 mb-2">Ongoing Support</h4>
-                      <p className="text-pink-700 text-sm">Continuous assistance during your initial months in Germany</p>
-                      <div className="mt-2 text-xs text-pink-600">✓ 24/7 helpline ✓ Local contacts ✓ Problem resolution</div>
+                    <div className="service-card bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Banknote className="h-5 w-5 text-purple-600" />
+                        <h4 className="font-bold text-purple-800">Banking & Insurance</h4>
+                      </div>
+                      <p className="text-purple-700 text-sm mb-2">Bank account opening & health insurance activation</p>
+                      <div className="text-xs text-purple-600">✓ Bank accounts ✓ Health insurance ✓ Financial setup</div>
+                    </div>
+                    <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Network className="h-5 w-5 text-green-600" />
+                        <h4 className="font-bold text-green-800">Community Support</h4>
+                      </div>
+                      <p className="text-green-700 text-sm mb-2">Alumni network & community events for networking</p>
+                      <div className="text-xs text-green-600">✓ Alumni mentoring ✓ Community events ✓ Professional networking</div>
                     </div>
                   </div>
 
-                  <div className="flex items-center text-rose-600">
-                    <HomeIcon className="h-5 w-5 mr-2" />
-                    <span className="font-medium">Complete settlement support • Your success is our mission</span>
+                  <div className="status-indicator">
+                    <HeartHandshake className="h-5 w-5 mr-2 text-teal-600" />
+                    <span className="font-semibold text-teal-600">End-to-end settlement • Stress-free transition guarantee</span>
                   </div>
                 </div>
 
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1531804055935-76f44d7c3621?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-                    alt="Beautiful German cityscape and community integration"
-                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-                  <div className="absolute top-4 right-4 bg-rose-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Welcome Home
+                <div className="relative group">
+                  <div className="image-container">
+                    <img
+                      src={nursingArrival}
+                      alt="International nursing graduate arriving at German airport with professional settlement support"
+                      className="rounded-3xl shadow-2xl w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-teal-600/30 via-transparent to-transparent rounded-3xl"></div>
+                    <div className="absolute top-6 left-6 bg-teal-500/90 text-white px-4 py-2 rounded-full text-sm font-bold backdrop-blur-sm">
+                      Complete Settlement Support
+                    </div>
                   </div>
                 </div>
               </motion.div>
             </div>
-          </div>
 
-          {/* Germany Hospital Facilities Image */}
-          <motion.div
-            className="relative rounded-2xl overflow-hidden shadow-2xl mt-16"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            data-testid="hospital-facilities"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
-              alt="Modern German hospital and medical facilities"
-              className="w-full h-96 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-80"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center text-white">
-                <h3 className="text-3xl font-bold mb-4" data-testid="facilities-title">World-Class Healthcare Facilities</h3>
-                <p className="text-xl opacity-90 max-w-2xl mx-auto" data-testid="facilities-description">
-                  Join Germany's premier hospitals and medical centers, equipped with cutting-edge technology and international standards of care.
+            {/* Success Guarantee Section */}
+            <motion.div
+              className="mt-20 text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="success-guarantee-card p-12 rounded-3xl mx-auto max-w-4xl">
+                <div className="flex justify-center mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-2xl">
+                    <Check className="h-10 w-10 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-4xl font-bold text-foreground mb-4 gradient-text">Complete Success Guarantee</h3>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  With our end-to-end support, we ensure a smooth and stress-free journey for students pursuing their education in Germany. From CVS education to successful settlement - we're with you every step.
                 </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-green-600 mb-2">500+</div>
+                    <div className="text-muted-foreground">Successfully Placed Students</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                    <div className="text-muted-foreground">Visa Success Rate</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-orange-600 mb-2">50+</div>
+                    <div className="text-muted-foreground">Partner German Hospitals</div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
