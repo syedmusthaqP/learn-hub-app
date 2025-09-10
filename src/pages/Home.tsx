@@ -481,34 +481,106 @@ export default function Home() {
       </section>
 
       {/* Comprehensive Journey to Germany */}
-      <section id="opportunities" className="py-20 bg-muted relative overflow-hidden" data-testid="opportunities-section">
+      <section id="opportunities" className="py-20 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden" data-testid="opportunities-section">
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="floating-orb top-20 left-10 bg-gradient-to-br from-orange-400/20 to-red-400/20"></div>
-          <div className="floating-orb-2 bottom-40 right-20 bg-gradient-to-br from-blue-400/20 to-purple-400/20"></div>
-          <div className="floating-orb top-60 right-10 bg-gradient-to-br from-green-400/20 to-teal-400/20"></div>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="floating-orb top-20 left-10 bg-gradient-to-br from-orange-400/30 to-red-400/30 orange-glow"></div>
+          <div className="floating-orb-2 bottom-40 right-20 bg-gradient-to-br from-blue-400/30 to-purple-400/30"></div>
+          <div className="floating-orb top-60 right-10 bg-gradient-to-br from-green-400/30 to-teal-400/30"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-20"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <div className="section-header">
-              <h2 className="section-title gradient-text" data-testid="opportunities-title">Your Complete Journey to Germany</h2>
-              <p className="section-subtitle" data-testid="opportunities-description">
-                Comprehensive end-to-end support from CVS education to successful settlement in Germany's healthcare system. Every step professionally managed for your success.
+              {/* Partnership Badge */}
+              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary/10 via-accent/15 to-primary/10 rounded-full mb-8 backdrop-blur-md border border-primary/30 premium-header animated-border">
+                <div className="flex items-center space-x-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <GraduationCap className="h-5 w-5 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-bold text-primary text-lg">CVS Education</div>
+                      <div className="text-xs text-muted-foreground">Nursing Excellence</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                    <div className="w-8 h-1 bg-gradient-to-r from-primary via-accent to-secondary rounded-full animate-pulse"></div>
+                    <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <Globe className="h-5 w-5 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-bold text-primary text-lg">StudyWings</div>
+                      <div className="text-xs text-muted-foreground">Global Placement</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h2 className="hero-title !text-5xl md:!text-6xl !mb-8 !leading-tight" data-testid="opportunities-title">
+                Your Complete Journey to 
+                <span className="block gradient-text-orange mt-2">German Healthcare Excellence</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-5xl mx-auto mb-12" data-testid="opportunities-description">
+                Strategic partnership combining <strong className="text-primary font-semibold">CVS Education's premier nursing programs</strong> with <strong className="text-accent font-semibold">StudyWings' international placement expertise</strong>. Every step professionally managed with guaranteed success pathways.
               </p>
+
+              {/* Success Metrics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div className="professional-card p-6 text-center card-hover-glow">
+                  <div className="text-4xl font-bold gradient-text mb-3 animate-pulse-soft">5</div>
+                  <div className="text-sm text-muted-foreground font-medium">Strategic Steps</div>
+                </div>
+                <div className="professional-card p-6 text-center card-hover-glow">
+                  <div className="text-4xl font-bold gradient-text mb-3 animate-pulse-soft">95%</div>
+                  <div className="text-sm text-muted-foreground font-medium">Success Rate</div>
+                </div>
+                <div className="professional-card p-6 text-center card-hover-glow">
+                  <div className="text-4xl font-bold gradient-text mb-3 animate-pulse-soft">€3,200</div>
+                  <div className="text-sm text-muted-foreground font-medium">Starting Salary</div>
+                </div>
+                <div className="professional-card p-6 text-center card-hover-glow">
+                  <div className="text-4xl font-bold gradient-text mb-3 animate-pulse-soft">50+</div>
+                  <div className="text-sm text-muted-foreground font-medium">Partner Hospitals</div>
+                </div>
+              </div>
             </div>
           </motion.div>
 
           {/* Comprehensive Journey Steps */}
           <div className="relative">
-            {/* Enhanced Journey Path Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-orange-500 via-blue-500 via-purple-500 to-green-500 opacity-30 hidden lg:block rounded-full journey-path-glow"></div>
+            {/* Enhanced Journey Path Line with Connection Nodes */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full hidden lg:block">
+              <div className="w-full h-full bg-gradient-to-b from-orange-500 via-blue-500 via-purple-500 via-green-500 to-teal-500 opacity-50 rounded-full journey-path-glow animate-pulse-soft"></div>
+              {/* Animated connection nodes */}
+              <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full shadow-2xl animate-bounce orange-glow" style={{ animationDelay: '0s' }}>
+                <div className="w-full h-full bg-white/20 rounded-full animate-ping"></div>
+              </div>
+              <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full shadow-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>
+                <div className="w-full h-full bg-white/20 rounded-full animate-ping"></div>
+              </div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full shadow-2xl animate-bounce" style={{ animationDelay: '1s' }}>
+                <div className="w-full h-full bg-white/20 rounded-full animate-ping"></div>
+              </div>
+              <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full shadow-2xl animate-bounce" style={{ animationDelay: '1.5s' }}>
+                <div className="w-full h-full bg-white/20 rounded-full animate-ping"></div>
+              </div>
+              <div className="absolute bottom-40 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full shadow-2xl animate-bounce" style={{ animationDelay: '2s' }}>
+                <div className="w-full h-full bg-white/20 rounded-full animate-ping"></div>
+              </div>
+            </div>
 
             <div className="space-y-20">
               {/* Step 1: CVS Education & Free Career Counseling */}
@@ -519,12 +591,17 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="journey-card gradient-border p-8 rounded-3xl" data-testid="step-education">
+                <div className="journey-card gradient-border p-10 rounded-3xl professional-card" data-testid="step-education">
                   <div className="flex items-start space-x-6 mb-8">
-                    <div className="step-number-glow">1</div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-foreground mb-3">CVS Education & Career Counseling</h3>
-                      <p className="text-muted-foreground text-lg leading-relaxed">Start your nursing journey with world-class education and personalized career guidance</p>
+                    <div className="step-number-glow bg-gradient-to-br from-orange-500 to-red-500 animate-float">
+                      <span className="text-3xl font-bold">1</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <div className="premium-badge animate-pulse">🎓 CVS Education Provider</div>
+                      </div>
+                      <h3 className="text-4xl font-bold text-foreground mb-4 gradient-text">CVS Education & Career Counseling</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed mb-6">Start your nursing journey with world-class education and personalized career guidance from India's premier nursing institution</p>
                     </div>
                   </div>
 
@@ -592,12 +669,17 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="lg:order-2 journey-card gradient-border p-8 rounded-3xl" data-testid="step-language">
+                <div className="lg:order-2 journey-card gradient-border p-10 rounded-3xl professional-card" data-testid="step-language">
                   <div className="flex items-start space-x-6 mb-8">
-                    <div className="step-number-glow bg-gradient-to-br from-blue-500 to-purple-500">2</div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-foreground mb-3">Language Training & Funding Support</h3>
-                      <p className="text-muted-foreground text-lg leading-relaxed">Master German language and secure funding for your educational journey</p>
+                    <div className="step-number-glow bg-gradient-to-br from-blue-500 to-purple-500 animate-float">
+                      <span className="text-3xl font-bold">2</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <div className="premium-badge bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse">🌍 StudyWings Provider</div>
+                      </div>
+                      <h3 className="text-4xl font-bold text-foreground mb-4 gradient-text">Language Training & Funding Support</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed mb-6">Master German language and secure comprehensive funding through StudyWings' international education expertise</p>
                     </div>
                   </div>
 
