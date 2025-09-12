@@ -605,40 +605,24 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-4 mb-6">
-                    <div className="service-card bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <GraduationCap className="h-5 w-5 text-orange-600" />
-                        <h4 className="font-bold text-orange-800">GNM Program</h4>
-                      </div>
-                      <p className="text-orange-700 text-sm mb-2">3-year comprehensive nursing diploma with clinical rotations</p>
-                      <div className="text-xs text-orange-600">✓ State-of-art labs ✓ Hospital partnerships</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Hospital className="h-5 w-5 text-orange-600" />
-                        <h4 className="font-bold text-orange-800">ANM Program</h4>
-                      </div>
-                      <p className="text-orange-700 text-sm mb-2">2-year auxiliary nursing certification with practical focus</p>
-                      <div className="text-xs text-orange-600">✓ Simulation training ✓ Clinical excellence</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <HeartHandshake className="h-5 w-5 text-blue-600" />
-                        <h4 className="font-bold text-blue-800">Free Career Counseling</h4>
-                      </div>
-                      <p className="text-blue-700 text-sm mb-2">Personalized guidance for choosing best career path</p>
-                      <div className="text-xs text-blue-600">✓ Academic background analysis ✓ Career goals assessment</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <FileText className="h-5 w-5 text-purple-600" />
-                        <h4 className="font-bold text-purple-800">University Applications</h4>
-                      </div>
-                      <p className="text-purple-700 text-sm mb-2">Complete application process management</p>
-                      <div className="text-xs text-purple-600">✓ Document preparation ✓ Guaranteed admissions</div>
-                    </div>
-                  </div>
+                   <div className="grid md:grid-cols-2 gap-4 mb-6">
+                     <div className="service-card bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <HeartHandshake className="h-5 w-5 text-blue-600" />
+                         <h4 className="font-bold text-blue-800">Free Career Counseling</h4>
+                       </div>
+                       <p className="text-blue-700 text-sm mb-2">We help students choose the best courses and universities for a successful and bright future based on their academic background and career goals</p>
+                       <div className="text-xs text-blue-600">✓ Academic background analysis ✓ Career goals assessment</div>
+                     </div>
+                     <div className="service-card bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <FileText className="h-5 w-5 text-purple-600" />
+                         <h4 className="font-bold text-purple-800">University Application Process</h4>
+                       </div>
+                       <p className="text-purple-700 text-sm mb-2">We assist with university applications, including writing motivation letters and guidance on required documents, ensuring guaranteed admissions</p>
+                       <div className="text-xs text-purple-600">✓ Motivation letters ✓ Document guidance ✓ Guaranteed admissions</div>
+                     </div>
+                   </div>
 
                   <div className="status-indicator">
                     <Clock className="h-5 w-5 mr-2 text-orange-600" />
@@ -683,38 +667,34 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="space-y-4 mb-6">
-                    <div className="service-card bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Languages className="h-5 w-5 text-blue-600" />
-                        <h4 className="font-bold text-blue-800">German Language (A1-B2)</h4>
-                      </div>
-                      <p className="text-blue-700 text-sm mb-3">Comprehensive German language preparation with medical terminology</p>
-                      <div className="flex items-center space-x-2 mb-2">
-                        <div className="green-light-pulse"></div>
-                        <span className="text-sm font-semibold text-green-600">Online + Offline Classes</span>
-                      </div>
-                      <div className="text-xs text-blue-600">✓ IELTS & German prep ✓ Cultural immersion ✓ Medical German</div>
-                    </div>
+                   <div className="space-y-4 mb-6">
+                     <div className="service-card bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Languages className="h-5 w-5 text-blue-600" />
+                         <h4 className="font-bold text-blue-800">Language Preparation</h4>
+                       </div>
+                       <p className="text-blue-700 text-sm mb-3">As official partners of IELTS, we provide expert guidance and preparation for IELTS and German language courses to meet university and visa requirements</p>
+                       <div className="text-xs text-blue-600">✓ German A1-B2 ✓ IELTS Academic ✓ TOEFL iBT</div>
+                     </div>
 
-                    <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Banknote className="h-5 w-5 text-green-600" />
-                        <h4 className="font-bold text-green-800">Scholarships & Funding</h4>
-                      </div>
-                      <p className="text-green-700 text-sm mb-2">Comprehensive funding support up to 40 lakhs from reputed banks</p>
-                      <div className="text-xs text-green-600">✓ University scholarships ✓ Study loans ✓ Funding up to 40L</div>
-                    </div>
+                     <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Banknote className="h-5 w-5 text-green-600" />
+                         <h4 className="font-bold text-green-800">Scholarships & Funding</h4>
+                       </div>
+                       <p className="text-green-700 text-sm mb-2">We guide students in securing scholarships from universities and assist in obtaining study loans from reputed Indian banks, with funding up to 40 lakhs</p>
+                       <div className="text-xs text-green-600">✓ University scholarships ✓ Study loans ✓ Funding up to 40 lakhs</div>
+                     </div>
 
-                    <div className="service-card bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Shield className="h-5 w-5 text-teal-600" />
-                        <h4 className="font-bold text-teal-800">Blocked Account Services</h4>
-                      </div>
-                      <p className="text-teal-700 text-sm mb-2">Complete support for blocked account & money exchange</p>
-                      <div className="text-xs text-teal-600">✓ Account setup ✓ Currency exchange ✓ Financial planning</div>
-                    </div>
-                  </div>
+                     <div className="service-card bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Shield className="h-5 w-5 text-teal-600" />
+                         <h4 className="font-bold text-teal-800">Blocked Account & Money Exchange Services</h4>
+                       </div>
+                       <p className="text-teal-700 text-sm mb-2">We provide support for opening a blocked account, arranging travel and health insurance, and facilitating money exchange services at competitive rates</p>
+                       <div className="text-xs text-teal-600">✓ Blocked account opening ✓ Travel insurance ✓ Money exchange</div>
+                     </div>
+                   </div>
 
                   <div className="status-indicator">
                     <Globe className="h-5 w-5 mr-2 text-blue-600" />
@@ -759,40 +739,40 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-4 mb-6">
-                    <div className="service-card bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <FileText className="h-5 w-5 text-purple-600" />
-                        <h4 className="font-bold text-purple-800">Passport & Visa Assistance</h4>
-                      </div>
-                      <p className="text-purple-700 text-sm mb-2">Complete passport application & APS process support</p>
-                      <div className="text-xs text-purple-600">✓ Passport guidance ✓ APS process ✓ Interview prep</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Scale className="h-5 w-5 text-indigo-600" />
-                        <h4 className="font-bold text-indigo-800">Visa Documentation</h4>
-                      </div>
-                      <p className="text-indigo-700 text-sm mb-2">Online applications for German & European universities</p>
-                      <div className="text-xs text-indigo-600">✓ CSP handling ✓ Document process ✓ VFS Global support</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-cyan-50 to-teal-50 border border-cyan-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <BookOpen className="h-5 w-5 text-cyan-600" />
-                        <h4 className="font-bold text-cyan-800">Visa Preparation</h4>
-                      </div>
-                      <p className="text-cyan-700 text-sm mb-2">Complete visa interview preparation & SOP drafting</p>
-                      <div className="text-xs text-cyan-600">✓ Interview prep ✓ SOP creation ✓ CV formatting</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-teal-50 to-green-50 border border-teal-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Shield className="h-5 w-5 text-teal-600" />
-                        <h4 className="font-bold text-teal-800">Pre-Departure Session</h4>
-                      </div>
-                      <p className="text-teal-700 text-sm mb-2">Essential guidance on packing, travel & cultural adaptation</p>
-                      <div className="text-xs text-teal-600">✓ Packing guidance ✓ Cultural tips ✓ Expectations briefing</div>
-                    </div>
-                  </div>
+                   <div className="grid md:grid-cols-2 gap-4 mb-6">
+                     <div className="service-card bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <FileText className="h-5 w-5 text-purple-600" />
+                         <h4 className="font-bold text-purple-800">Passport & Visa Assistance</h4>
+                       </div>
+                       <p className="text-purple-700 text-sm mb-2">Guidance for Passport Application • Complete APS Process Support</p>
+                       <div className="text-xs text-purple-600">✓ Passport guidance ✓ APS process ✓ Complete support</div>
+                     </div>
+                     <div className="service-card bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Scale className="h-5 w-5 text-indigo-600" />
+                         <h4 className="font-bold text-indigo-800">Visa Documentation Support</h4>
+                       </div>
+                       <p className="text-indigo-700 text-sm mb-2">We manage online applications for both German and European Universities, handle the Consular Portal (CSP), ensuring smooth documentation through VFS Global</p>
+                       <div className="text-xs text-indigo-600">✓ Online applications ✓ CSP handling ✓ VFS Global support</div>
+                     </div>
+                     <div className="service-card bg-gradient-to-br from-cyan-50 to-teal-50 border border-cyan-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <BookOpen className="h-5 w-5 text-cyan-600" />
+                         <h4 className="font-bold text-cyan-800">Visa Preparation</h4>
+                       </div>
+                       <p className="text-cyan-700 text-sm mb-2">German visa interview preparation • Visa SOP drafting • European CV & Cover Letter creation • Financial proof guidance</p>
+                       <div className="text-xs text-cyan-600">✓ Interview prep ✓ SOP creation ✓ CV & Cover Letter ✓ Financial docs</div>
+                     </div>
+                     <div className="service-card bg-gradient-to-br from-teal-50 to-green-50 border border-teal-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Shield className="h-5 w-5 text-teal-600" />
+                         <h4 className="font-bold text-teal-800">Pre-Departure Session</h4>
+                       </div>
+                       <p className="text-teal-700 text-sm mb-2">Packing lists & travel essentials • Part-time jobs guidelines • Do's and Don'ts in Germany • Cultural adaptation</p>
+                       <div className="text-xs text-teal-600">✓ Packing guidance ✓ Job guidelines ✓ Cultural tips ✓ Expectations</div>
+                     </div>
+                   </div>
 
                   <div className="status-indicator">
                     <Shield className="h-5 w-5 mr-2 text-purple-600" />
@@ -837,39 +817,25 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="space-y-4 mb-6">
-                    <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
-                      <div className="flex items-center justify-between mb-3">
-                        <h4 className="font-bold text-green-800 text-lg">Starting Salary Range</h4>
-                        <div className="text-3xl font-bold text-green-600">€2,700-3,200</div>
-                      </div>
-                      <p className="text-green-700 text-sm">Monthly income with excellent growth opportunities</p>
-                      <div className="text-xs text-green-600 mt-2">✓ Competitive salary ✓ Regular increments ✓ Performance bonuses</div>
-                    </div>
+                   <div className="space-y-4 mb-6">
+                     <div className="service-card bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Building2 className="h-5 w-5 text-blue-600" />
+                         <h4 className="font-bold text-blue-800">Accommodation & Part-time Jobs Assistance</h4>
+                       </div>
+                       <p className="text-blue-700 text-sm mb-2">We help students find accommodation in major cities like Berlin, Munich, Hamburg, Stuttgart, and Hamm, whether through university dorms, private apartments, or shared housing</p>
+                       <div className="text-xs text-blue-600">✓ Major cities housing ✓ University dorms ✓ Part-time job reference assistance</div>
+                     </div>
 
-                    <div className="service-card bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200/50">
-                      <div className="flex items-center justify-between mb-3">
-                        <div>
-                          <h4 className="font-bold text-emerald-800">Work-Life Balance</h4>
-                          <p className="text-emerald-700 text-sm">Professional healthcare environment</p>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-emerald-600">38.5h</div>
-                          <div className="text-sm text-emerald-600">per week</div>
-                        </div>
-                      </div>
-                      <div className="text-xs text-emerald-600">✓ 30 days vacation ✓ Health benefits ✓ Professional growth</div>
-                    </div>
-
-                    <div className="service-card bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Building2 className="h-5 w-5 text-blue-600" />
-                        <h4 className="font-bold text-blue-800">Accommodation Support</h4>
-                      </div>
-                      <p className="text-blue-700 text-sm mb-2">Complete housing assistance in major German cities</p>
-                      <div className="text-xs text-blue-600">✓ Berlin, Munich, Hamburg ✓ University dorms ✓ Part-time job references</div>
-                    </div>
-                  </div>
+                     <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Network className="h-5 w-5 text-green-600" />
+                         <h4 className="font-bold text-green-800">Networking & Community Support</h4>
+                       </div>
+                       <p className="text-green-700 text-sm mb-2">Connecting students with alumni and mentors in Germany • Guidance on student communities, events, and networking opportunities</p>
+                       <div className="text-xs text-green-600">✓ Alumni connections ✓ Community events ✓ Networking opportunities</div>
+                     </div>
+                   </div>
 
                   <div className="status-indicator">
                     <Hospital className="h-5 w-5 mr-2 text-green-600" />
@@ -914,40 +880,40 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-4 mb-6">
-                    <div className="service-card bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Plane className="h-5 w-5 text-teal-600" />
-                        <h4 className="font-bold text-teal-800">Airport Pickup</h4>
-                      </div>
-                      <p className="text-teal-700 text-sm mb-2">Professional airport pickup assistance (if required)</p>
-                      <div className="text-xs text-teal-600">✓ Arrival support ✓ Initial guidance ✓ Safe transportation</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <FileText className="h-5 w-5 text-blue-600" />
-                        <h4 className="font-bold text-blue-800">Registration Support</h4>
-                      </div>
-                      <p className="text-blue-700 text-sm mb-2">City registration & residence permit process assistance</p>
-                      <div className="text-xs text-blue-600">✓ City registration ✓ Residence permits ✓ Legal formalities</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Banknote className="h-5 w-5 text-purple-600" />
-                        <h4 className="font-bold text-purple-800">Banking & Insurance</h4>
-                      </div>
-                      <p className="text-purple-700 text-sm mb-2">Bank account opening & health insurance activation</p>
-                      <div className="text-xs text-purple-600">✓ Bank accounts ✓ Health insurance ✓ Financial setup</div>
-                    </div>
-                    <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <Network className="h-5 w-5 text-green-600" />
-                        <h4 className="font-bold text-green-800">Community Support</h4>
-                      </div>
-                      <p className="text-green-700 text-sm mb-2">Alumni network & community events for networking</p>
-                      <div className="text-xs text-green-600">✓ Alumni mentoring ✓ Community events ✓ Professional networking</div>
-                    </div>
-                  </div>
+                   <div className="grid md:grid-cols-2 gap-4 mb-6">
+                     <div className="service-card bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Plane className="h-5 w-5 text-teal-600" />
+                         <h4 className="font-bold text-teal-800">Airport Pickup Assistance</h4>
+                       </div>
+                       <p className="text-teal-700 text-sm mb-2">Airport pickup assistance (if required)</p>
+                       <div className="text-xs text-teal-600">✓ Arrival support ✓ Initial guidance ✓ Safe transportation</div>
+                     </div>
+                     <div className="service-card bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <FileText className="h-5 w-5 text-blue-600" />
+                         <h4 className="font-bold text-blue-800">City Registration & Residence Permit</h4>
+                       </div>
+                       <p className="text-blue-700 text-sm mb-2">City registration & residence permit process assistance</p>
+                       <div className="text-xs text-blue-600">✓ City registration ✓ Residence permits ✓ Legal formalities</div>
+                     </div>
+                     <div className="service-card bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Banknote className="h-5 w-5 text-purple-600" />
+                         <h4 className="font-bold text-purple-800">Bank Account Opening Support</h4>
+                       </div>
+                       <p className="text-purple-700 text-sm mb-2">Bank account opening support • Health insurance activation • Semester travel ticket arrangements at best prices</p>
+                       <div className="text-xs text-purple-600">✓ Bank accounts ✓ Health insurance ✓ Travel tickets</div>
+                     </div>
+                     <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
+                       <div className="flex items-center space-x-3 mb-3">
+                         <Shield className="h-5 w-5 text-green-600" />
+                         <h4 className="font-bold text-green-800">Settlement Assistance</h4>
+                       </div>
+                       <p className="text-green-700 text-sm mb-2">Comprehensive assistance in linking blocked accounts, opening new bank accounts, and obtaining city registration documents</p>
+                       <div className="text-xs text-green-600">✓ Blocked account linking ✓ New bank accounts ✓ Registration docs</div>
+                     </div>
+                   </div>
 
                   <div className="status-indicator">
                     <HeartHandshake className="h-5 w-5 mr-2 text-teal-600" />
