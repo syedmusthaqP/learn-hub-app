@@ -42,6 +42,8 @@ import nursingLanguage from "@/assets/nursing-language.jpg";
 import nursingDocumentation from "@/assets/nursing-documentation.jpg";
 import nursingCareer from "@/assets/nursing-career.jpg";
 import nursingArrival from "@/assets/nursing-arrival.jpg";
+import masterProgramsGermany from "@/assets/master-programs-germany.png";
+import nursingBenefitsGermany from "@/assets/nursing-benefits-germany.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -591,7 +593,12 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-orange-50/80 via-red-50/60 to-orange-100/70 backdrop-blur-sm border-2 border-orange-200/50 shadow-2xl" data-testid="step-education">
+                <div className="journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-orange-50/80 via-red-50/60 to-orange-100/70 backdrop-blur-sm border-2 border-orange-200/50 shadow-2xl relative overflow-hidden" data-testid="step-education">
+                  {/* Gradient Light Effects */}
+                  <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-orange-400/30 to-transparent rounded-full blur-xl animate-pulse"></div>
+                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-red-400/20 to-transparent rounded-full blur-lg animate-float"></div>
+                  <div className="absolute top-1/2 right-0 w-20 h-20 bg-gradient-to-l from-orange-300/25 to-transparent rounded-full blur-md animate-pulse"></div>
+                  <div className="relative z-10">
                   <div className="flex items-start space-x-6 mb-8">
                     <div className="step-number-glow bg-gradient-to-br from-orange-500 to-red-500 animate-float w-20 h-20 rounded-full flex items-center justify-center shadow-2xl">
                       <span className="text-4xl font-bold text-white">1</span>
@@ -628,6 +635,7 @@ export default function Home() {
                     <Clock className="h-5 w-5 mr-2 text-orange-600" />
                     <span className="font-semibold text-orange-600">Duration: 2-3 years • 15+ years excellence</span>
                   </div>
+                  </div>
                 </div>
 
                 <div className="relative group">
@@ -653,7 +661,12 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="lg:order-2 journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-blue-100/70 backdrop-blur-sm border-2 border-blue-200/50 shadow-2xl" data-testid="step-language">
+                <div className="lg:order-2 journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-blue-50/80 via-purple-50/60 to-blue-100/70 backdrop-blur-sm border-2 border-blue-200/50 shadow-2xl relative overflow-hidden" data-testid="step-language">
+                  {/* Gradient Light Effects */}
+                  <div className="absolute top-0 right-0 w-36 h-36 bg-gradient-to-bl from-blue-400/30 to-transparent rounded-full blur-xl animate-pulse"></div>
+                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-gradient-to-tr from-purple-400/20 to-transparent rounded-full blur-lg animate-float"></div>
+                  <div className="absolute top-1/3 left-0 w-22 h-22 bg-gradient-to-r from-blue-300/25 to-transparent rounded-full blur-md animate-pulse"></div>
+                  <div className="relative z-10">
                   <div className="flex items-start space-x-6 mb-8">
                     <div className="step-number-glow bg-gradient-to-br from-blue-500 to-purple-500 animate-float w-20 h-20 rounded-full flex items-center justify-center shadow-2xl">
                       <span className="text-4xl font-bold text-white">2</span>
@@ -668,14 +681,18 @@ export default function Home() {
                   </div>
 
                    <div className="space-y-4 mb-6">
-                     <div className="service-card bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/50">
-                       <div className="flex items-center space-x-3 mb-3">
-                         <Languages className="h-5 w-5 text-blue-600" />
-                         <h4 className="font-bold text-blue-800">Language Preparation</h4>
-                       </div>
-                       <p className="text-blue-700 text-sm mb-3">As official partners of IELTS, we provide expert guidance and preparation for IELTS and German language courses to meet university and visa requirements</p>
-                       <div className="text-xs text-blue-600">✓ German A1-B2 ✓ IELTS Academic ✓ TOEFL iBT</div>
-                     </div>
+                      <div className="service-card bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/50">
+                        <div className="flex items-center space-x-3 mb-3">
+                          <Languages className="h-5 w-5 text-blue-600" />
+                          <h4 className="font-bold text-blue-800">Language Preparation</h4>
+                        </div>
+                        <p className="text-blue-700 text-sm mb-3">As official partners of IELTS, we provide expert guidance and preparation for IELTS and German language courses to meet university and visa requirements</p>
+                        <div className="grid grid-cols-2 gap-2 mb-2">
+                          <div className="bg-blue-100 px-2 py-1 rounded text-xs font-semibold text-blue-800">🏫 Online Classes</div>
+                          <div className="bg-cyan-100 px-2 py-1 rounded text-xs font-semibold text-cyan-800">🏢 Offline Classes</div>
+                        </div>
+                        <div className="text-xs text-blue-600">✓ German A1-B2 ✓ IELTS Academic ✓ TOEFL iBT</div>
+                      </div>
 
                      <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
                        <div className="flex items-center space-x-3 mb-3">
@@ -699,6 +716,7 @@ export default function Home() {
                   <div className="status-indicator">
                     <Globe className="h-5 w-5 mr-2 text-blue-600" />
                     <span className="font-semibold text-blue-600">95% pass rate • Expert certified instructors</span>
+                  </div>
                   </div>
                 </div>
 
@@ -725,7 +743,12 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-purple-50/80 via-pink-50/60 to-purple-100/70 backdrop-blur-sm border-2 border-purple-200/50 shadow-2xl" data-testid="step-documentation">
+                <div className="journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-purple-50/80 via-pink-50/60 to-purple-100/70 backdrop-blur-sm border-2 border-purple-200/50 shadow-2xl relative overflow-hidden" data-testid="step-documentation">
+                  {/* Gradient Light Effects */}
+                  <div className="absolute top-0 left-0 w-30 h-30 bg-gradient-to-br from-purple-400/30 to-transparent rounded-full blur-xl animate-pulse"></div>
+                  <div className="absolute bottom-0 right-0 w-26 h-26 bg-gradient-to-tl from-pink-400/20 to-transparent rounded-full blur-lg animate-float"></div>
+                  <div className="absolute top-2/3 right-0 w-18 h-18 bg-gradient-to-l from-purple-300/25 to-transparent rounded-full blur-md animate-pulse"></div>
+                  <div className="relative z-10">
                   <div className="flex items-start space-x-6 mb-8">
                     <div className="step-number-glow bg-gradient-to-br from-purple-500 to-pink-500 animate-float w-20 h-20 rounded-full flex items-center justify-center shadow-2xl">
                       <span className="text-4xl font-bold text-white">3</span>
@@ -778,6 +801,7 @@ export default function Home() {
                     <Shield className="h-5 w-5 mr-2 text-purple-600" />
                     <span className="font-semibold text-purple-600">100% legal compliance • Expert documentation team</span>
                   </div>
+                  </div>
                 </div>
 
                 <div className="relative group">
@@ -803,7 +827,12 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="lg:order-2 journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-green-50/80 via-emerald-50/60 to-green-100/70 backdrop-blur-sm border-2 border-green-200/50 shadow-2xl" data-testid="step-placement">
+                <div className="lg:order-2 journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-green-50/80 via-emerald-50/60 to-green-100/70 backdrop-blur-sm border-2 border-green-200/50 shadow-2xl relative overflow-hidden" data-testid="step-placement">
+                  {/* Gradient Light Effects */}
+                  <div className="absolute top-0 right-0 w-34 h-34 bg-gradient-to-bl from-green-400/30 to-transparent rounded-full blur-xl animate-pulse"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-emerald-400/20 to-transparent rounded-full blur-lg animate-float"></div>
+                  <div className="absolute top-1/4 left-0 w-20 h-20 bg-gradient-to-r from-green-300/25 to-transparent rounded-full blur-md animate-pulse"></div>
+                  <div className="relative z-10">
                   <div className="flex items-start space-x-6 mb-8">
                     <div className="step-number-glow bg-gradient-to-br from-green-500 to-emerald-500 animate-float w-20 h-20 rounded-full flex items-center justify-center shadow-2xl">
                       <span className="text-4xl font-bold text-white">4</span>
@@ -827,19 +856,38 @@ export default function Home() {
                        <div className="text-xs text-blue-600">✓ Major cities housing ✓ University dorms ✓ Part-time job reference assistance</div>
                      </div>
 
-                     <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
-                       <div className="flex items-center space-x-3 mb-3">
-                         <Network className="h-5 w-5 text-green-600" />
-                         <h4 className="font-bold text-green-800">Networking & Community Support</h4>
-                       </div>
-                       <p className="text-green-700 text-sm mb-2">Connecting students with alumni and mentors in Germany • Guidance on student communities, events, and networking opportunities</p>
-                       <div className="text-xs text-green-600">✓ Alumni connections ✓ Community events ✓ Networking opportunities</div>
-                     </div>
+                      <div className="service-card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50">
+                        <div className="flex items-center space-x-3 mb-3">
+                          <Network className="h-5 w-5 text-green-600" />
+                          <h4 className="font-bold text-green-800">Networking & Community Support</h4>
+                        </div>
+                        <p className="text-green-700 text-sm mb-2">Connecting students with alumni and mentors in Germany • Guidance on student communities, events, and networking opportunities</p>
+                        <div className="text-xs text-green-600">✓ Alumni connections ✓ Community events ✓ Networking opportunities</div>
+                      </div>
+
+                      <div className="service-card bg-gradient-to-br from-orange-50 to-yellow-50 border border-orange-200/50">
+                        <div className="flex items-center space-x-3 mb-3">
+                          <Euro className="h-5 w-5 text-orange-600" />
+                          <h4 className="font-bold text-orange-800">High Demand & Job Security</h4>
+                        </div>
+                        <p className="text-orange-700 text-sm mb-2">Germany faces a nursing shortage, ensuring stable jobs. Good salary & benefits - Earn €2,500-€3,000/month with paid leave, insurance, and pensions</p>
+                        <div className="text-xs text-orange-600">✓ Stable employment ✓ €2,500-€3,000/month ✓ Full benefits</div>
+                      </div>
+
+                      <div className="service-card bg-gradient-to-br from-teal-50 to-blue-50 border border-teal-200/50">
+                        <div className="flex items-center space-x-3 mb-3">
+                          <Users className="h-5 w-5 text-teal-600" />
+                          <h4 className="font-bold text-teal-800">PR & Family Visa Benefits</h4>
+                        </div>
+                        <p className="text-teal-700 text-sm mb-2">Eligible for Permanent Residency (PR) after 18 months; family reunification possible. Career Growth - Specializations, promotions, and international recognition</p>
+                        <div className="text-xs text-teal-600">✓ PR after 18 months ✓ Family reunification ✓ Career growth</div>
+                      </div>
                    </div>
 
                   <div className="status-indicator">
                     <Hospital className="h-5 w-5 mr-2 text-green-600" />
                     <span className="font-semibold text-green-600">50+ partner hospitals • Direct placement guarantee</span>
+                  </div>
                   </div>
                 </div>
 
@@ -866,7 +914,12 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-teal-50/80 via-cyan-50/60 to-teal-100/70 backdrop-blur-sm border-2 border-teal-200/50 shadow-2xl" data-testid="step-settlement">
+                <div className="journey-card gradient-border p-10 rounded-3xl professional-card bg-gradient-to-br from-teal-50/80 via-cyan-50/60 to-teal-100/70 backdrop-blur-sm border-2 border-teal-200/50 shadow-2xl relative overflow-hidden" data-testid="step-settlement">
+                  {/* Gradient Light Effects */}
+                  <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-teal-400/30 to-transparent rounded-full blur-xl animate-pulse"></div>
+                  <div className="absolute bottom-0 right-0 w-28 h-28 bg-gradient-to-tl from-cyan-400/20 to-transparent rounded-full blur-lg animate-float"></div>
+                  <div className="absolute top-1/2 right-0 w-24 h-24 bg-gradient-to-l from-teal-300/25 to-transparent rounded-full blur-md animate-pulse"></div>
+                  <div className="relative z-10">
                   <div className="flex items-start space-x-6 mb-8">
                     <div className="step-number-glow bg-gradient-to-br from-teal-500 to-blue-500 animate-float w-20 h-20 rounded-full flex items-center justify-center shadow-2xl">
                       <span className="text-4xl font-bold text-white">5</span>
@@ -918,6 +971,7 @@ export default function Home() {
                   <div className="status-indicator">
                     <HeartHandshake className="h-5 w-5 mr-2 text-teal-600" />
                     <span className="font-semibold text-teal-600">End-to-end settlement • Stress-free transition guarantee</span>
+                  </div>
                   </div>
                 </div>
 
@@ -975,6 +1029,94 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why CVs Choose StudyWings */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50" data-testid="why-choose-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="section-header">
+              <h2 className="section-title gradient-text-orange" data-testid="why-choose-title">Why CVs Choose StudyWings?</h2>
+              <p className="section-subtitle" data-testid="why-choose-description">
+                Top-ranked Master's programs and comprehensive support for international nursing careers
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Programs Showcase */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative">
+                <img
+                  src={masterProgramsGermany}
+                  alt="Top Ranked Master's Programs in Germany including AI, Engineering, Business, Renewable Energy and Computer Science"
+                  className="rounded-2xl shadow-2xl w-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              </div>
+            </motion.div>
+
+            {/* Features Grid */}
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-orange-200/50">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                    <GraduationCapIcon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800">Top-Ranked Programs</h3>
+                </div>
+                <p className="text-gray-600 mb-4">Access to Germany's premier Master's programs in cutting-edge fields like AI & Data Science, Engineering & Automotive Technology, and Business & Management</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">AI & Data Science</span>
+                  <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Engineering</span>
+                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Business & MBA</span>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-blue-200/50">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <Hospital className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800">Medical Excellence</h3>
+                </div>
+                <p className="text-gray-600 mb-4">English-taught medical programs including MBBS/MD, Dentistry, Pharmacy, Nursing & Allied Health, and Healthcare Management</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">MBBS/MD</span>
+                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Nursing</span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Healthcare Mgmt</span>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-green-200/50">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                    <HeartHandshake className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800">Direct Job Placements</h3>
+                </div>
+                <p className="text-gray-600">@StudyWings-Overseas, we offer direct job placements for nursing professionals with guaranteed career success and international recognition</p>
+                <div className="mt-4 text-green-600 font-semibold">✓ Guaranteed Placements ✓ International Recognition ✓ Career Growth</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Form */}
       <section id="contact" className="py-20 bg-secondary" data-testid="contact-section">
