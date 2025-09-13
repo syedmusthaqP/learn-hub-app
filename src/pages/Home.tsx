@@ -166,7 +166,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center gradient-bg overflow-hidden" data-testid="hero-section">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Floating Gradient Orbs */}
         <div className="floating-orb top-20 left-10"></div>
@@ -185,37 +185,37 @@ export default function Home() {
                 <div className="h-1 w-12 bg-white rounded"></div>
                 <span className="text-lg font-medium opacity-90">Partnership Announcement</span>
               </div>
-              <h1 className="hero-title" data-testid="hero-title">
+              <h1 className="hero-title text-white drop-shadow-lg" data-testid="hero-title">
                 Transforming Nursing
                 <span className="gradient-text-orange">Education</span>
                 for Global Excellence
               </h1>
-              <p className="text-xl leading-relaxed mb-8 opacity-90" data-testid="hero-description">
+              <p className="text-xl leading-relaxed mb-8 opacity-90 text-white drop-shadow-md" data-testid="hero-description">
                 CVS Educational Institution partners with StudyWings to create unprecedented pathways for nursing professionals seeking world-class opportunities in Germany's healthcare system.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold orange-glow shimmer-effect" data-testid="hero-explore-btn">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-lg border-2 border-primary-foreground/20" data-testid="hero-explore-btn">
                   <span>Explore Partnership</span>
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary shimmer-effect" data-testid="hero-watch-btn">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary bg-white/10 backdrop-blur-sm shadow-lg" data-testid="hero-watch-btn">
                   Watch Success Stories
                 </Button>
               </div>
 
               {/* Partnership Stats */}
-              <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white border-opacity-20">
+              <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/30">
                 <div className="text-center" data-testid="stat-students">
-                  <div className="text-3xl font-bold">500+</div>
-                  <div className="text-sm opacity-80">Students Placed</div>
+                  <div className="text-3xl font-bold text-white drop-shadow-md">500+</div>
+                  <div className="text-sm opacity-80 text-white">Students Placed</div>
                 </div>
                 <div className="text-center" data-testid="stat-success">
-                  <div className="text-3xl font-bold">95%</div>
-                  <div className="text-sm opacity-80">Success Rate</div>
+                  <div className="text-3xl font-bold text-white drop-shadow-md">95%</div>
+                  <div className="text-sm opacity-80 text-white">Success Rate</div>
                 </div>
                 <div className="text-center" data-testid="stat-hospitals">
-                  <div className="text-3xl font-bold">50+</div>
-                  <div className="text-sm opacity-80">Partner Hospitals</div>
+                  <div className="text-3xl font-bold text-white drop-shadow-md">50+</div>
+                  <div className="text-sm opacity-80 text-white">Partner Hospitals</div>
                 </div>
               </div>
             </motion.div>
@@ -228,18 +228,18 @@ export default function Home() {
             >
               <div className="relative animate-float">
                 <img
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-                  alt="Modern nursing education facilities"
+                  src={nursingEducation}
+                  alt="Professional nursing education and training"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   data-testid="hero-main-image"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-transparent opacity-20 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent rounded-2xl"></div>
               </div>
 
               <div className="absolute -bottom-12 -left-12 w-48 h-36 animate-pulse-soft">
                 <img
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
-                  alt="Professional collaboration handshake"
+                  src={nursingCollaboration}
+                  alt="International nursing collaboration"
                   className="rounded-xl shadow-lg w-full h-full object-cover"
                   data-testid="hero-collaboration-image"
                 />
@@ -1042,79 +1042,136 @@ export default function Home() {
             <div className="section-header">
               <h2 className="section-title gradient-text-orange" data-testid="why-choose-title">Why CVs Choose StudyWings?</h2>
               <p className="section-subtitle" data-testid="why-choose-description">
-                Top-ranked Master's programs and comprehensive support for international nursing careers
+                Your gateway to prestigious German nursing education and lucrative healthcare careers
               </p>
             </div>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Programs Showcase */}
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* World-Class Education */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-200/50"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="relative">
-                <img
-                  src={masterProgramsGermany}
-                  alt="Top Ranked Master's Programs in Germany including AI, Engineering, Business, Renewable Energy and Computer Science"
-                  className="rounded-2xl shadow-2xl w-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                <GraduationCapIcon className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">World-Class Education</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  English-taught nursing programs
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  State-of-the-art medical facilities
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  Internationally recognized degrees
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  Direct pathway to German healthcare system
+                </li>
+              </ul>
             </motion.div>
 
-            {/* Features Grid */}
+            {/* Financial Benefits */}
             <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-200/50"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-orange-200/50">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                    <GraduationCapIcon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800">Top-Ranked Programs</h3>
-                </div>
-                <p className="text-gray-600 mb-4">Access to Germany's premier Master's programs in cutting-edge fields like AI & Data Science, Engineering & Automotive Technology, and Business & Management</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">AI & Data Science</span>
-                  <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Engineering</span>
-                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Business & MBA</span>
-                </div>
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                <Euro className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Lucrative Career Prospects</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  €2,800-4,200 monthly starting salary
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  Comprehensive health insurance
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  30+ days annual vacation
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  Clear pathway to permanent residency
+                </li>
+              </ul>
+            </motion.div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-blue-200/50">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                    <Hospital className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800">Medical Excellence</h3>
-                </div>
-                <p className="text-gray-600 mb-4">English-taught medical programs including MBBS/MD, Dentistry, Pharmacy, Nursing & Allied Health, and Healthcare Management</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">MBBS/MD</span>
-                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Nursing</span>
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Healthcare Mgmt</span>
-                </div>
+            {/* Comprehensive Support */}
+            <motion.div
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200/50"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6">
+                <HeartHandshake className="h-8 w-8 text-white" />
               </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-green-200/50">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                    <HeartHandshake className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800">Direct Job Placements</h3>
-                </div>
-                <p className="text-gray-600">@StudyWings-Overseas, we offer direct job placements for nursing professionals with guaranteed career success and international recognition</p>
-                <div className="mt-4 text-green-600 font-semibold">✓ Guaranteed Placements ✓ International Recognition ✓ Career Growth</div>
-              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">End-to-End Support</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  Guaranteed job placement assistance
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  Complete visa and documentation help
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  German language training included
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  Post-arrival settlement support
+                </li>
+              </ul>
             </motion.div>
           </div>
+
+          {/* Success Statistics */}
+          <motion.div
+            className="mt-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 text-white"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <div className="grid md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold mb-2">500+</div>
+                <div className="text-primary-foreground/80">Nurses Placed Successfully</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">98%</div>
+                <div className="text-primary-foreground/80">Job Placement Rate</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">50+</div>
+                <div className="text-primary-foreground/80">Partner German Hospitals</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">€3,500</div>
+                <div className="text-primary-foreground/80">Average Starting Salary</div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
